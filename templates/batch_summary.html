@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="analytics-container">
+  <div class="analytics-card">
+    <h2 class="analytics-title">Batch Upload Summary</h2>
+
+    <p>Total rows processed: <strong>{{ summary.total_rows }}</strong></p>
+    <p>Average confidence: <strong>{{ "%.3f"|format(summary.avg_confidence) }}</strong></p>
+
+    <h4>Predictions by category</h4>
+    <ul>
+      {% for k,v in summary.by_category.items() %}
+        <li>{{ k }}: {{ v }}</li>
+      {% endfor %}
+    </ul>
+
+    <h4>Preview (first 20)</h4>
+    <div>{{ preview | safe }}</div>
+
+    <a class="btn" href="{{ url_for('download_predictions') }}">Download full predictions CSV</a>
+    <a class="btn" href="{{ url_for('insights') }}">Open Insights Dashboard</a>
+  </div>
+</div>
+{% endblock %}

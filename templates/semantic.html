@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="glass-card">
+  <h3>Semantic Merchant Search</h3>
+  <form method="POST">
+    <input type="text" name="merchant" class="form-control premium-input" placeholder="Search merchants (eg. Amazon)">
+    <button class="premium-btn mt-3">Search</button>
+  </form>
+
+  {% if results %}
+    <hr>
+    <h5>Top similar merchants for "{{ query }}"</h5>
+    <ul class="list-group mt-2">
+      {% for r in results %}
+        <li class="list-group-item">
+          <b>{{ r.merchant }}</b>
+          <span class="badge badge-pill badge-info float-right">{{ r.score }}</span>
+          <div>Pred: {{ r.label }} ({{ r.conf }}) — tokens: {{ r.tokens|join(", ") }}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+{% endblock %}

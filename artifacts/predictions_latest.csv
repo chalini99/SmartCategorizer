@@ -1,0 +1,201 @@
+merchant,prediction,confidence
+Dunkin',Food & Drinks,0.5686
+Apollo Hospit@l,Health,0.3757
+Cafe Nero,Food & Drinks,0.5941
+Hotel 487,Travel,0.2872
+Shell Gas 47,Fuel,0.3661
+Starbucks,Food & Drinks,0.3405
+Phone Bill,Bills & Utilities,0.4295
+Unknown Merchant 469,Others,0.3858
+Netflix POS,Entertainment,0.4096
+Shell Gas 50,Fuel,0.3984
+Dunkin',Food & Drinks,0.5686
+Jio Recharge,Bills & Utilities,0.5147
+Safeway,Groceries,0.4249
+Petrol Pump 659,Fuel,0.341
+Jio Recharge,Bills & Utilities,0.5147
+Delta Airlines,Travel,0.5714
+Walmart Grocery,Groceries,0.6856
+Spotify,Entertainment,0.5654
+Walmart Grocery,Groceries,0.6856
+AMC Theatres,Entertainment,0.4326
+Phone Bill,Bills & Utilities,0.4295
+Petrol Pump 686,Fuel,0.341
+Delta Airlines,Travel,0.5714
+Electricity Board,Bills & Utilities,0.3616
+Unknown - Merchant - 443,Others,0.365
+Uber Trip,Travel,0.227
+Amazon Marketplace,Shopping,0.4063
+Subway POS,Food & Drinks,0.3683
+ExxonMobil,Fuel,0.5125
+Grocery Store 243,Groceries,0.4712
+Safeway,Groceries,0.4249
+Jio Recharge,Bills & Utilities,0.5147
+Booking.com,Travel,0.6067
+Cineplex,Entertainment,0.5654
+Clinic 302 POS,Health,0.3452
+BSNL,Bills & Utilities,0.4041
+Booking.com POS,Travel,0.5638
+Dentist 308,Health,0.2851
+Cineplex,Entertainment,0.5654
+Booking.com,Travel,0.6067
+Delta Airlines,Travel,0.5714
+Zara,Shopping,0.3631
+ExxonMobil,Fuel,0.5125
+Am@zon Mktp 307,Shopping,0.3535
+Clinic @34,Health,0.3679
+Dunkin',Food & Drinks,0.5686
+Shell Gas 23,Fuel,0.3661
+AMZ Petrol Pump 326,Fuel,0.3368
+Safeway,Groceries,0.4249
+Flipkart #325,Shopping,0.4581
+AMZ Charity869,Health,0.2122
+Hotel 751,Travel,0.2907
+Local Cafe 482,Food & Drinks,0.3557
+AMZ Pharmacy 539,Health,0.3834
+Shell Gas 350,Fuel,0.3661
+AMZ Charity 968,Others,0.3244
+Charity 61,Others,0.4891
+Walmart Grocery,Groceries,0.6856
+Misc Purchase 911,Others,0.4601
+Water Supply Dept,Bills & Utilities,0.2222
+Dunkin',Food & Drinks,0.5686
+Flipkart,Shopping,0.4581
+Walmart  Grocery,Groceries,0.6856
+CVS Pharmacy,Health,0.3823
+Air India,Travel,0.5081
+Trader  Joe's,Groceries,0.2058
+BigBasket,Groceries,0.396
+Misc Purchase 26,Others,0.4601
+DUNKIN',Food & Drinks,0.5686
+Netflix,Entertainment,0.5031
+Best Buy,Shopping,0.4581
+Uber Trip,Travel,0.227
+Shell Gas 211,Fuel,0.3984
+Sp0tify,Entertainment,0.2335
+Cafe Nero POS,Food & Drinks,0.4928
+Flipkart,Shopping,0.4581
+Internet Provider,Bills & Utilities,0.4287
+Grocery  Store  297,Groceries,0.4712
+H&M,Health,0.1287
+Amazon Mktp 623 #36,Shopping,0.3609
+Charity 745,Others,0.3696
+Trader Joe's,Groceries,0.2058
+BOOKSTORE 574,Entertainment,0.2721
+Hotel 841 POS,Travel,0.2895
+BSNL #438,Bills & Utilities,0.3377
+Myntr@,Shopping,0.2409
+Water Supply Dept,Bills & Utilities,0.2222
+Donation 131,Others,0.2357
+Shel@ Gas#192,Fuel,0.2708
+Tra@#r Joe's,Groceries,0.1511
+Spotify,Entertainment,0.5654
+AMC Theatres #112,Entertainment,0.3935
+Pharmacy 6,Health,0.4908
+Charity 567,Others,0.3696
+Jio Recharge,Bills & Utilities,0.5147
+bookstore 406,Entertainment,0.2721
+Bookstore 42 POS,Entertainment,0.2522
+Cineplex POS,Entertainment,0.4353
+Pharmacy - 253,Health,0.3823
+Shell Gas 996,Fuel,0.3984
+Cafe Nero,Food & Drinks,0.5941
+Electricity B0ard,Bills & Utilities,0.2823
+Amazon Mktp 824,Shopping,0.4045
+Cafe Nero,Food & Drinks,0.5941
+Local Cafe 870,Food & Drinks,0.3557
+Spotify POS,Entertainment,0.4353
+D0nati0n 701 POS,Others,0.2172
+Total Energies,Fuel,0.485
+Best Buy,Shopping,0.4581
+Dunkin' POS,Food & Drinks,0.4587
+Walmart Grocery,Groceries,0.6856
+Total - Energies,Fuel,0.485
+Cineplex,Entertainment,0.5654
+Myntr@,Shopping,0.2409
+Am@zon Mktp 596,Shopping,0.3535
+Subway,Food & Drinks,0.4932
+AMZ H&M,Health,0.2122
+BP Fuel Station,Fuel,0.3301
+Unknown Merchant 150,Others,0.365
+Flipkart,Shopping,0.4581
+H&M,Health,0.1287
+CVS Pharmacy,Health,0.3823
+Netflix,Entertainment,0.5031
+McDonalds,Food & Drinks,0.2186
+Booking.com POS,Travel,0.5638
+Internet Provider POS,Bills & Utilities,0.3845
+Electricity Board,Bills & Utilities,0.3616
+Dunkin',Food & Drinks,0.5686
+Pharmacy 762,Health,0.3823
+Subway,Food & Drinks,0.4932
+Walmart Grocery,Groceries,0.6856
+Misc Purchase 828,Others,0.4601
+Donation 175,Others,0.1768
+Cineplex,Entertainment,0.5654
+Cafe Nero,Food & Drinks,0.5941
+Clinic 737,Health,0.3679
+AMZ Dentist 644,Health,0.3057
+Lyft,Travel,0.227
+!M! Charity 384,Others,0.3696
+AMAZON MKTP 381,Shopping,0.3784
+Clinic 629,Health,0.3679
+Misc Purchase 703,Others,0.4601
+Misc Purch@se 98,Others,0.2926
+Pharmacy 802 POS,Health,0.3561
+Ap0ll0 H0spital,Health,0.2541
+Air India,Travel,0.5081
+Air India,Travel,0.5081
+exxonmobil,Fuel,0.5125
+AMZ Total Energies,Fuel,0.4771
+BP Fuel Station,Fuel,0.3301
+ExxonMobil,Fuel,0.5125
+Grocery Store 898 POS,Groceries,0.4112
+Unknown - Merchant - 463,Others,0.365
+Starbucks,Food & Drinks,0.3405
+AMZ Total Energies,Fuel,0.4771
+AMC Theatres,Entertainment,0.4326
+AMZ Cafe Nero,Food & Drinks,0.4723
+Subway,Food & Drinks,0.4932
+Booking.com,Travel,0.6067
+Booking.com,Travel,0.6067
+Walmart Grocery,Groceries,0.6856
+AMZ D!ntist 311,Health,0.2719
+Internet Provider,Bills & Utilities,0.4287
+AMZ Delta Airlines,Travel,0.4616
+Best Buy,Shopping,0.4581
+Air India POS,Travel,0.4621
+Walmart Grocery,Groceries,0.6856
+Netflix,Entertainment,0.5031
+Cineplex,Entertainment,0.5654
+AMZ BigBasket,Groceries,0.3109
+Pharmacy 782,Health,0.3823
+Apollo Hospital,Health,0.311
+AMZ Apollo Hospit@l POS,Health,0.3843
+BP Fuel Station POS,Fuel,0.3084
+Spotify,Entertainment,0.5654
+charity 416,Others,0.3696
+Cineplex #296,Entertainment,0.5654
+Electricity Board POS,Bills & Utilities,0.3383
+Clinic 906,Health,0.3679
+BSNL,Bills & Utilities,0.4041
+Spotify,Entertainment,0.5654
+Amazon Marketplace,Shopping,0.4063
+Grocery Store 466,Groceries,0.4712
+Apollo Hospital,Health,0.311
+Booking.com,Travel,0.6067
+MISC PURCHASE 490,Others,0.4601
+BSNL,Bills & Utilities,0.4041
+AMZ#Phone Bill,Bills & Utilities,0.3729
+Amc Theatres,Entertainment,0.4326
+Delta Airlines,Travel,0.5714
+charity 516,Others,0.3696
+CVS Pharmacy,Health,0.3823
+Water Supply Dept,Bills & Utilities,0.2222
+Grocery Store 63,Groceries,0.4712
+Bigbasket,Groceries,0.396
+Delta Airlines,Travel,0.5714
+bigbasket POS,Groceries,0.2975
+Subway,Food & Drinks,0.4932
+Zara,Shopping,0.3631
+Hotel 721,Travel,0.2907

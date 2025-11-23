@@ -1,0 +1,15 @@
+                   precision    recall  f1-score   support
+
+Bills & Utilities       1.00      1.00      1.00         4
+    Entertainment       1.00      1.00      1.00         4
+    Food & Drinks       1.00      1.00      1.00         4
+             Fuel       1.00      1.00      1.00         4
+        Groceries       1.00      1.00      1.00         4
+           Health       0.67      1.00      0.80         4
+           Others       1.00      0.75      0.86         4
+         Shopping       1.00      0.75      0.86         4
+           Travel       1.00      1.00      1.00         4
+
+         accuracy                           0.94        36
+        macro avg       0.96      0.94      0.95        36
+     weighted avg       0.96      0.94      0.95        36

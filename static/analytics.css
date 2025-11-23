@@ -1,0 +1,61 @@
+.analytics-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.analytics-card {
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.analytics-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.analytics-section {
+    margin-top: 25px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.chart-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-img {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.15);
+    transition: 0.3s ease;
+}
+
+.chart-img:hover {
+    transform: scale(1.02);
+}
+
+.divider {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.macro-score {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00e0ff;
+    text-align: center;
+}

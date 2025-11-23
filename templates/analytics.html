@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+    .analytics-container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 10px;
+    }
+
+    .analytics-card {
+        background: rgba(255,255,255,0.08);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .analytics-title {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .analytics-section {
+        margin-top: 25px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .chart-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    .chart-img {
+        width: 100%;
+        max-width: 650px;
+        border-radius: 12px;
+        border: 2px solid rgba(255,255,255,0.15);
+    }
+
+    .divider {
+        margin: 30px 0;
+        border: 0;
+        border-top: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .macro-score {
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        color: #00eaff;
+    }
+</style>
+
+<div class="analytics-container">
+    <div class="analytics-card">
+        <h2 class="analytics-title">📊 Analytics Dashboard</h2>
+
+        <!-- Category Distribution -->
+        <div class="analytics-section">
+            <h3 class="section-title">Category Distribution</h3>
+            <div class="chart-wrapper">
+                <img src="{{ url_for('static', filename='artifacts/category_distribution.png') }}" 
+                     class="chart-img" 
+                     alt="Category Distribution">
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Per-Class F1 Scores -->
+        <div class="analytics-section">
+            <h3 class="section-title">Per-Class F1 Scores</h3>
+            <div class="chart-wrapper">
+                <img src="{{ url_for('static', filename='artifacts/f1_scores.png') }}" 
+                     class="chart-img"
+                     alt="F1 Scores">
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Overall Macro F1 -->
+        <div class="analytics-section">
+            <h3 class="section-title">Overall Macro F1 Score</h3>
+            <p class="macro-score">{{ macro_f1 }}</p>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

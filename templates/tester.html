@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="glass-card">
+  <h3>Noise Robustness Tester</h3>
+  <form method="POST">
+    <input type="text" name="merchant" class="form-control premium-input" placeholder="Enter merchant (eg. AMZ Mktp)">
+    <button class="premium-btn mt-3">Run Test</button>
+  </form>
+
+  {% if results %}
+  <hr>
+  <h5>Stability: {{ stability }} (fraction of variants matching original)</h5>
+  <table class="table table-sm mt-2 text-dark" style="background:#fff;padding:10px;">
+    <thead><tr><th>Variant</th><th>Label</th><th>Conf</th><th>Tokens</th></tr></thead>
+    <tbody>
+    {% for r in results %}
+      <tr>
+        <td>{{ r.text }}</td>
+        <td>{{ r.label }}</td>
+        <td>{{ r.conf }}</td>
+        <td>{{ r.tokens|join(", ") }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endblock %}

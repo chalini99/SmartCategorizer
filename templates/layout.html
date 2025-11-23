@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart CategorizerAI</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="light-mode">
+<nav class="navbar premium-nav">
+    <span class="navbar-brand mx-auto">
+        <img src="https://cdn-icons-png.flaticon.com/512/2985/2985150.png" width="30">
+        <b>Smart CategorizerAI</b>
+    </span>
+
+    <a href="/" class="nav-btn">Home</a>
+    <a href="/admin" class="nav-btn">Admin</a>
+    <a href="/analytics" class="nav-btn">Analytics</a>
+    <a href="/batch" class="nav-btn">Batch</a>
+    <a href="/tester" class="nav-btn">Tester</a>
+    <a href="/semantic" class="nav-btn">Semantic</a>
+    <a href="/explain_heat" class="nav-btn">Explain</a>
+
+
+
+
+    <!-- Theme toggle -->
+    <button id="theme-toggle" class="theme-btn">
+        <i data-feather="moon"></i>
+    </button>
+</nav>
+
+<!-- Toast Message -->
+<div id="toast" class="toast-msg">Prediction Ready!</div>
+
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+<script>
+  feather.replace();
+
+  // Theme Toggle
+document.getElementById("theme-toggle").onclick = function() {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+
+      const isDark = body.classList.contains("dark-mode");
+
+      // Change toggle icon
+      const icon = document.querySelector("#theme-toggle i");
+      icon.setAttribute("data-feather", isDark ? "sun" : "moon");
+      feather.replace();
+
+      // Update category icon
+      const catIcon = document.getElementById("category-icon");
+      if (catIcon) {
+          if (isDark) {
+              catIcon.src = catIcon.src.replace("light_", "dark_");
+          } else {
+              catIcon.src = catIcon.src.replace("dark_", "light_");
+          }
+      }
+};
+
+
+  // Toast Trigger
+  function showToast() {
+      const t = document.getElementById("toast");
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 3000);
+  }
+</script>
+<script>
+async function suggestMerchants(q){
+  const res = await fetch("/api/suggest", {
+    method:"POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({q})
+  });
+  const data = await res.json();
+  return data.results;
+}
+
+// attach to input
+const mInput = document.querySelector('input[name="merchant"]');
+if(mInput){
+  const box = document.createElement('div');
+  box.className = 'suggest-box';
+  mInput.parentNode.appendChild(box);
+  mInput.addEventListener('input', async (e)=>{
+    const q = e.target.value;
+    if(q.length < 2){ box.innerHTML = ''; return; }
+    const items = await suggestMerchants(q);
+    box.innerHTML = items.map(it=>`<div class="sugg-item" onclick="(function(v){document.querySelector('input[name=merchant]').value=v;document.querySelector('.suggest-box').innerHTML='';})(\`${it.merchant}\`)">${it.merchant}</div>`).join('');
+  });
+}
+</script>
+
+<style>
+.suggest-box { position:relative; margin-top:8px; max-width:420px; }
+.sugg-item { background:#fff; padding:8px; border-radius:6px; margin:4px 0; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.08) }
+</style>
+
+
+</body>
+</html>

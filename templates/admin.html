@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="glass-card">
+    <h3><b>Admin Panel — Category Taxonomy</b></h3>
+
+    <form method="POST">
+        <label><b>Edit/Update Categories (comma-separated)</b></label>
+        <textarea name="categories" class="form-control premium-input"
+          style="height:140px;">{{ category_text }}</textarea>
+
+        <button class="premium-btn btn-block mt-3">Save Changes</button>
+    </form>
+    <a href="/retrain" class="btn btn-warning btn-block mt-3">Retrain Model</a>
+
+    {% if saved %}
+    <div class="alert alert-success mt-3">
+        Updated successfully!
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

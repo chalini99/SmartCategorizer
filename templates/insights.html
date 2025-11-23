@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="analytics-container">
+  <div class="analytics-card">
+    <h2 class="analytics-title">Transaction Insights</h2>
+    <p><strong>Total spend:</strong> ₹{{ total_spend }}</p>
+
+    <div style="display:flex;gap:24px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:280px">
+        <h3>Category Totals</h3>
+        <ul>
+          {% for k,v in cat_totals.items() %}
+            <li>{{ k }} : {{ "%.2f"|format(v) }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div style="flex:1;min-width:280px">
+        <h3>Category Counts</h3>
+        <ul>
+          {% for k,v in cat_counts.items() %}
+            <li>{{ k }} : {{ v }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div style="flex:1;min-width:280px">
+        <h3>Top Merchants</h3>
+        <ol>
+          {% for m,c in top_merchants.items() %}
+            <li>{{ m }} ({{ c }})</li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+
+    <hr>
+    <p>Charts (automatically generated during training)</p>
+    <div class="chart-wrapper">
+      <img src="{{ url_for('static', filename='artifacts/category_distribution.png') }}" class="chart-img" alt="Category distribution">
+    </div>
+  </div>
+</div>
+{% endblock %}

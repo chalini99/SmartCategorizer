@@ -1,0 +1,72 @@
+{
+    "macro_f1": 0.946031746031746,
+    "report": {
+        "Bills & Utilities": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+        },
+        "Entertainment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+        },
+        "Food & Drinks": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+        },
+        "Fuel": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+        },
+        "Groceries": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+        },
+        "Health": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1-score": 0.8,
+            "support": 4.0
+        },
+        "Others": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1-score": 0.8571428571428571,
+            "support": 4.0
+        },
+        "Shopping": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1-score": 0.8571428571428571,
+            "support": 4.0
+        },
+        "Travel": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+        },
+        "accuracy": 0.9444444444444444,
+        "macro avg": {
+            "precision": 0.9629629629629629,
+            "recall": 0.9444444444444444,
+            "f1-score": 0.946031746031746,
+            "support": 36.0
+        },
+        "weighted avg": {
+            "precision": 0.9629629629629629,
+            "recall": 0.9444444444444444,
+            "f1-score": 0.946031746031746,
+            "support": 36.0
+        }
+    }
+}

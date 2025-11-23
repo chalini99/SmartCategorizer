@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="glass-card">
+
+    <h3 class="text-center mb-4"><b>AI Transaction Categorizer</b></h3>
+
+    <form method="POST" onsubmit="startLoader()">
+        <label><b>Enter Transaction / Merchant Name</b></label>
+        <input type="text" name="merchant" class="form-control premium-input"
+               required placeholder="Ex: Starbucks, Flipkart, Shell Gas #23">
+
+        <button class="premium-btn mt-3 btn-block">Predict</button>
+
+        <!-- Animated Loader -->
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p>Analyzing transaction...</p>
+        </div>
+    </form>
+    <form action="/feedback" method="POST">
+    <input type="hidden" name="merchant" value="{{ request.form['merchant'] }}">
+    <label>Is this prediction correct?</label><br>
+
+    <button name="correct" value="{{ prediction }}" class="btn btn-success btn-sm mt-2">Yes</button>
+    <button name="correct" value="wrong" class="btn btn-danger btn-sm mt-2">No</button>
+</form>
+
+
+    {% if prediction %}
+    <script> showToast(); </script>
+
+    <hr>
+
+    <div class="result-box">
+        <h4 class="mb-3">
+            <img id="category-icon" 
+     src="/static/icons/light_{{ prediction|lower|replace(' ', '_') }}.png"
+     class="icon-img">
+
+            <b>{{ prediction }}</b>
+        </h4>
+
+        <p>
+            <i data-feather="activity"></i>
+            Confidence: <b>{{ confidence }}</b>
+        </p>
+
+        <p>
+            <i data-feather="key"></i>
+            Key tokens:
+            {% for t in tokens %}
+              <span class="badge badge-info">{{ t }}</span>
+            {% endfor %}
+        </p>
+    </div>
+
+    <h5 class="mt-3"><b>Model Performance</b></h5>
+    <img src="/static/confusion_matrix.png" class="img-fluid perf-img">
+    {% endif %}
+</div>
+<script>
+async function livePredict() {
+    let text = document.querySelector("input[name='merchant']").value;
+    let res = await fetch("/api/predict", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({merchant: text})
+    });
+    let data = await res.json();
+    console.log(data);
+}
+</script>
+
+<script>
+function startLoader() {
+    document.getElementById("loader").classList.remove("hidden");
+}
+</script>
+<script>
+function updateIconTheme() {
+    const isDark = document.body.classList.contains("dark-mode");
+    const icon = document.getElementById("category-icon");
+    if (!icon) return;
+
+    let src = icon.src;
+
+    if (isDark) {
+        icon.src = icon.src.replace("light_", "dark_");
+    } else {
+        icon.src = icon.src.replace("dark_", "light_");
+    }
+}
+
+// call on load
+updateIconTheme();
+</script>
+
+{% endblock %}
